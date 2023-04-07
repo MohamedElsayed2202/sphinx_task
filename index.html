@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Sphinx Task</title>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <div class="title m-2">Look and match.</div>
+                <div class="headericon">
+                    <img class="reponsive_img open_resource_popup" src="assets/images/resourse_icon.png" alt="">
+                </div>
+                <div class="headericon">
+                    <img class="reponsive_img open_help_popup" src="assets/images/help_icon.png" alt="">
+                </div>
+                <audio id="audioPlayer" preload="auto"></audio>
+            </div>
+            <div class="col-12 main_content">
+                <div class="col-12 main_content_bg">
+                </div>
+                <div class="col-12 main_content_fg p-2">
+                    <div class="iner_content">
+                        <div class="questions">
+                            <div class="col-3 question" data-question-id="1">
+                                <img class="queClick" src="assets/images/p19ex21_1.png">
+                                <div class="circle queClick"></div>
+                            </div>
+                            <div class="col-3 question" data-question-id="2">
+                                <img class="queClick" src="assets/images/p19ex21_2.png">
+                                <div class="circle queClick"></div>
+                            </div>
+                            <div class="col-3 question" data-question-id="3">
+                                <img class="queClick" src="assets/images/p19ex21_3.png">
+                                <div class="circle queClick"></div>
+                            </div>
+                            <div class="col-3 question" data-question-id="4">
+                                <img class="queClick" src="assets/images/p19ex21_4.png">
+                                <div class="circle queClick"></div>
+                            </div>
+                        </div>
+                        <div class="lines">
+                            <svg viewBox="0 0 1250 260" preserveAspectRatio="none">
+                                <polyline class="line" points="172,17 766,240"></polyline>
+                                
+                                <polyline class="line" points="484,17 1078,240"></polyline>
+
+                                <polyline class="line" points="766,17 172,240"></polyline>
+
+                                <polyline class="line" points="1078,17 484,240"></polyline>
+                            </svg>
+                        </div>
+                        <div class="answers">
+                            <div class="col-3 answer" data-answer-id="3">
+                                <div class="circle option"></div>
+                                <div class="option">chair</div>
+                                <div class="cross_mark">
+                                    <img src="assets/images/crossMark.png">
+                                </div>
+                            </div>
+                            <div class="col-3 answer" data-answer-id="4">
+                                <div class="circle option"></div>
+                                <div class="option">window</div>
+                                <div class="cross_mark">
+                                    <img src="assets/images/crossMark.png">
+                                </div>
+                            </div>
+                            <div class="col-3 answer" data-answer-id="1">
+                                <div class="circle option"></div>
+                                <div class="option">scissors</div>
+                                <div class="cross_mark">
+                                    <img src="assets/images/crossMark.png">
+                                </div>
+                            </div>
+                            <div class="col-3 answer" data-answer-id="2">
+                                <div class="circle option"></div>
+                                <div class="option">board</div>
+                                <div class="cross_mark">
+                                    <img src="assets/images/crossMark.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="headericon">
+                    <img class="reponsive_img reload" src="assets/images/replay_icon.png" alt="">
+                </div>
+                <div class="headericon">
+                    <img class="reponsive_img showAns" src="assets/images/showAns_icon.png" alt="">
+                </div>
+            </div>
+            <div class="popup">
+                <div class="popup_content p-2">
+                    <img class="close_btn" src="assets/images/close_icon.png">
+                    <div class="popup_img">
+                        <img src="assets/images/dummy.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="help_popup">
+                <div class="help_popup_content p-3">
+                    <img class="close_help_btn" src="assets/images/close_icon.png">
+                    <div class="help_popup_txt">
+                        <p>Help content goes her.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="mainscript.js"></script>
+</body>
+
+</html>

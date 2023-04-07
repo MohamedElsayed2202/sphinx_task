@@ -1,0 +1,228 @@
+@font-face {
+    font-family: myFont;
+    src: url('/assets/fonts/SassoonInfantStd.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    font-family: myFont !important;
+}
+
+#preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #fff url(assets/images/Preloader_2.gif) no-repeat center center;
+}
+
+.container {
+    transition: all 1000ms ease-in-out !important;
+}
+
+.container .content {
+    display: block;
+    position: relative;
+    left: 150%;
+    transition: left 500ms ease-in-out;
+
+}
+.container .content .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container .content .header .title {
+    font-size: 2vw;
+    width: 84%;
+}
+
+.container .content .header .headericon {
+    width: 4%;
+    margin: 1% 0 1% 2%;
+}
+
+.reponsive_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main_content {
+    position: relative;
+    z-index: 2;
+}
+
+.main_content .main_content_bg {
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    height: 35.5vw;
+    background-color: #0fa0c5;
+}
+
+.main_content .main_content_fg {
+    position: relative;
+    height: 37.5vw;
+    background-color: white;
+    width: 96%;
+    margin: auto;
+    border-radius: 1.3vw;
+    border: #F5821F solid 0.4vw;
+}
+
+.main_content .main_content_fg .iner_content {
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 100%;
+}
+.iner_content .questions, .iner_content .answers{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    z-index: 2;
+}
+.answers{
+    position: relative;
+    bottom: 4.1vw;
+}
+.question, .answer {
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.answer {
+    font-size: 2.5vw;
+}
+
+.question img {
+    width: 10vw;
+    height: 10vw;
+}
+
+.circle {
+    border: #F5821F solid 0.3vw;
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    background-color: #fff;
+}
+
+.question .circle {
+    margin-top: 1.5625vw;
+}
+.selected{
+    background-color: #0fa0c5;
+}
+.disable{
+    cursor: default !important;
+    opacity: 0.6;
+}
+.queClick, .option{
+    cursor: pointer;
+}
+
+.lines{
+    position: relative;
+    top: -2vw;
+}
+.lines svg{
+    width: 100%;
+    height: 17vw;
+}
+.lines svg .line{
+    stroke: #0fa0c5;
+    stroke-width: 4;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1000;
+    display: none;
+    animation: dash .5s linear alternate;
+}
+.container .content .footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #deecf6;
+    position: relative;
+    top: -1vw;
+}
+.container .content .footer .headericon{
+    width: 4%;
+    margin: 1.5vw 0;
+}
+.cross_mark{
+    display: none;
+    animation: blinks 1s ;
+}
+.cross_mark img{
+    width: 2.5vw;
+}
+.container .content .popup, .container .content .help_popup{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .8);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.popup .popup_content, .help_popup .help_popup_content{
+    width: 96%;
+    background: white;
+    height: 37.5vw;
+    position: relative;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+    border: #F5821F solid 0.4vw;
+    border-radius: 1.3vw;
+}
+.popup_content .close_btn, .help_popup_content .close_help_btn{
+    position: absolute;
+    top: 0.5vw;
+    right: 0.5vw;
+    width: 3%;
+}
+.popup_content .popup_img, .help_popup_content .help_popup_txt{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.popup_content .popup_img img{
+    width: 100%;
+}
+.help_popup_content .help_popup_txt{
+    font-size: 2vw;
+}
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes blinks {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
